@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleksi 2025</title>
+    <style>
+        body {
+            background-color: #fdf6e3; /* Warna kertas lama */
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #5d4037;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            width: 85%;
+            max-width: 400px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        h2 { font-size: 1.2rem; color: #8e735b; }
+        #question {
+            font-size: 1.4rem;
+            margin: 30px 0;
+            line-height: 1.5;
+            min-height: 100px;
+        }
+        button {
+            background-color: #8e735b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Refleksi Tahun Lalu ✨</h2>
+    <div id="question">Klik tombol di bawah untuk mulai refleksi diri...</div>
+    <button onclick="nextQuestion()">Pertanyaan Baru</button>
+</div>
+
+<script>
+    const listPertanyaan = [
+        "Apa pencapaian terbesarmu di tahun lalu?",
+        "Siapa orang yang paling kamu syukuri kehadirannya?",
+        "Apa satu hal yang ingin kamu lepaskan di tahun ini?",
+        "Momen apa yang paling bikin kamu tertawa lepas?",
+        "Pelajaran hidup apa yang paling mahal harganya?",
+        "Apa kebiasaan baru yang ingin kamu bangun?",
+        "Jika bisa bicara ke diri sendiri di awal tahun lalu, mau bilang apa?"
+    ];
+
+    function nextQuestion() {
+        const randomIndex = Math.floor(Math.random() * listPertanyaan.length);
+        document.getElementById('question').innerText = listPertanyaan[randomIndex];
+    }
+</script>
+
+</body>
+</html>
